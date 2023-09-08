@@ -98,12 +98,12 @@ Once games have been completed and saved to the database, previous games will sh
 ### Game screenshots
 
 <p style="text-align: center">
-  <img src="resources/screenshots/1.jpg" width="300" style="margin: 10px" />
-  <img src="resources/screenshots/1.5.jpg" width="300" style="margin: 10px" />
-  <img src="resources/screenshots/2.jpg" width="300" style="margin: 10px" />
-  <img src="resources/screenshots/3.jpg" width="300" style="margin: 10px" />
-  <img src="resources/screenshots/4.jpg" width="300" style="margin: 10px" />
-  <img src="resources/screenshots/5.jpg" width="300" style="margin: 10px" />
-  <img src="resources/screenshots/6.jpg" width="300" style="margin: 10px" />
-  <img src="resources/screenshots/7.jpg" width="300" style="margin: 10px" />
+  <img src="resources/screenshots/1.jpg" width="400" style="margin: 10px" />
+  <img src="resources/screenshots/1.5.jpg" width="400" style="margin: 10px" />
+  <img src="resources/screenshots/2.jpg" width="400" style="margin: 10px" />
+  <img src="resources/screenshots/3.jpg" width="400" style="margin: 10px" />
+  <img src="resources/screenshots/4.jpg" width="400" style="margin: 10px" />
+  <img src="resources/screenshots/5.jpg" width="400" style="margin: 10px" />
+  <img src="resources/screenshots/6.jpg" width="400" style="margin: 10px" />
+  <img src="resources/screenshots/7.jpg" width="400" style="margin: 10px" />
 </p>
