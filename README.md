@@ -1,66 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Welcome to my Tic-Tac-Toe game
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+This is a game built with a Laravel backend and React UI frontend.
+
+Please follow the instructions below to run the game.
+
+### Installation
+
+In your local development environment, clone the repository by running the git command below:
+
+```
+git clone https://github.com/chant9/tic-tac-toe.git
+```
+
+## Installation
+
+Please run all the commands below from the project root directory.
+
+### Installing Laravel
+
+Run the composer command below.
+
+```
+composer install
+```
+
+If an error occurs with the composer install, you may need to run the command below.
+
+```
+composer install --ignore-platform-reqs
+```
+
+### Setting up the environment file
+
+Copy of the example .env file to be the .env file used with the command below.
+
+```
+mv .env.example .env
+```
+
+The example environment file may need modifying for your database details, it will be setup with the standard details below.
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=tictactoe
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### Installing React UI
+
+Run the npm command below.
+
+```
+npm install
+```
+
+If an error occurs with the npm install, you may need to run the command below.
+
+```
+npm install --legacy-peer-deps
+```
+
+You can then compile the application by running the command below.
+
+```
+npm run build
+```
+
+### Setting up the database
+
+Run the php artisan command below, if there is an error connecting to the database, please verify the details in the environment file.
+
+```
+php artisan migrate
+```
+
+### Running the site server
+
+Run the php artisan command below to run the site, and it should output the site URL. The site URL will likely be http://127.0.0.1:8000/
+
+```
+php artisan serve
+```
+
+## Playing the game
+
+Playing the game should be easy, you'll be taken through the game setup in steps where you enter your name, choose your symbol for the game, then confirm if you want to play against the computer or a friend.
+
+After completing the setup the game board will show, and it will say at the top who's turn it is to pick a move. If you are playing against the computer, the computer might made made the first move, so a symbol will already be on the board.
+
+Once the game is complete, it will confirm the result and give options to restart the game, which starts a new game with the same game and player setup. Or you can start a new game and go through the game and player setup again.
+
+Once games have been completed and saved to the database, previous games will show at the bottom of the page, confirming the time, the result and how the board ended that can be zoom on hover.
+
+### Game screenshots
+
+<p style="text-align: center">
+  <img src="resources/screenshots/1.jpg" width="300" style="margin: 10px" />
+  <img src="resources/screenshots/1.5.jpg" width="300" style="margin: 10px" />
+  <img src="resources/screenshots/2.jpg" width="300" style="margin: 10px" />
+  <img src="resources/screenshots/3.jpg" width="300" style="margin: 10px" />
+  <img src="resources/screenshots/4.jpg" width="300" style="margin: 10px" />
+  <img src="resources/screenshots/5.jpg" width="300" style="margin: 10px" />
+  <img src="resources/screenshots/6.jpg" width="300" style="margin: 10px" />
+  <img src="resources/screenshots/7.jpg" width="300" style="margin: 10px" />
 </p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
