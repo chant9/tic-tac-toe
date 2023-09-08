@@ -1,0 +1,211 @@
+// Variables
+$text-color: #333;
+$lines-color: #999;
+$text-winner: #06a506;
+$bg-winner: #c9fdc9;
+$text-loser: #cc0000;
+$bg-loser: #ffccbb;
+$text-draw: #0047ab;
+$bg-draw: #e5f3fd;
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+.instructionHeading {
+    &.win {
+        font-weight: bold;
+        color: $text-winner;
+    }
+    &.lost {
+        font-weight: bold;
+        color: $text-loser;
+    }
+    &.drew {
+        font-weight: bold;
+        color: $text-draw;
+    }
+
+    i {
+        vertical-align: middle;
+    }
+}
+
+.introPanel {
+    background-color: #fff;
+    border: 10px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+    max-width: 540px;
+    padding: 15px;
+    margin: 15px auto;
+
+    :global(label.form-label) {
+        display: block;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    :global(.row + .row) {
+        margin-top: 30px;
+    }
+
+    input {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+.board {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    max-width: 540px;
+    margin: 15px auto 30px;
+    background-color: #fff;
+    border: 10px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+
+    @include media-breakpoint-up(sm) {
+        border-width: 20px;
+    }
+    @include media-breakpoint-up(lg) {
+        border-width: 30px;
+        max-width: 680px;
+    }
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s;
+    width: 33.3333%;
+    border: 1px solid $text-color;
+
+    @include media-breakpoint-up(sm) {
+        border-width: 2px;
+    }
+    @include media-breakpoint-up(lg) {
+        border-width: 3px;
+    }
+
+    &:before{
+        content:"";
+        display:block;
+        margin-top:100%;
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+        border-top-color: transparent;
+    }
+    &:nth-of-type(3),
+    &:nth-of-type(6),
+    &:nth-of-type(9) {
+        border-right-color: transparent;
+    }
+    &:nth-of-type(1),
+    &:nth-of-type(4),
+    &:nth-of-type(7) {
+        border-left-color: transparent;
+    }
+    &:nth-of-type(7),
+    &:nth-of-type(8),
+    &:nth-of-type(9) {
+        border-bottom-color: transparent;
+    }
+
+    &.available:hover {
+        cursor: pointer;
+        background-color: #DDD;
+    }
+
+    &.finished {
+        i {
+            color: rgba($text-color, 0.3);
+        }
+    }
+    &.winner {
+        background-color: $bg-winner;
+
+        i {
+            color: $text-winner;
+        }
+    }
+    &.loser {
+        background-color: $bg-loser;
+
+        i {
+            color: $text-loser;
+        }
+    }
+    &.draw {
+        background-color: $bg-draw;
+
+        i {
+            color: $text-draw;
+        }
+    }
+
+    i {
+        font-size: 20px;
+        color: $text-color;
+
+        @media (min-width: 400px) {
+            font-size: 30px;
+        }
+        @include media-breakpoint-up(sm) {
+            font-size: 40px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 60px;
+        }
+    }
+}
+
+.previousGames {
+    max-width: 540px;
+    padding: 0 15px;
+    margin: 30px auto 0;
+
+    :global(.row) {
+        z-index: 1;
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $lines-color;
+    }
+    :global(.row:first-of-type) {
+        border-top: 1px solid $lines-color;
+    }
+
+    .board {
+        max-width: 50px;
+        margin: 0;
+        border-width: 1px;
+        float: right;
+        transition: transform 0.5s;
+    }
+    :global(.row:hover) {
+        z-index: 2;
+
+        .board {
+            @include media-breakpoint-up(sm) {
+                transform: scale(2);
+            }
+        }
+    }
+
+    .square {
+        border-width: 1px;
+
+        i {
+            font-size: 8px;
+        }
+    }
+
+    .previousGamesHr {
+        border-color: $lines-color;
+        opacity: 1;
+    }
+}
