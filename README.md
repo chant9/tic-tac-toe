@@ -89,7 +89,7 @@ php artisan serve
 
 Playing the game should be easy, you'll be taken through the game setup in steps where you enter your name, choose your symbol for the game, then confirm if you want to play against the computer or a friend.
 
-After completing the setup the game board will show, and it will say at the top who's turn it is to pick a move. If you are playing against the computer, the computer might made made the first move, so a symbol will already be on the board.
+After completing the setup, the game board will show, and it will say at the top whose turn it is to pick a move. If you are playing against the computer, the computer might have made the first move, so a symbol will already be on the board.
 
 Once the game is complete, it will confirm the result and give options to restart the game, which starts a new game with the same game and player setup. Or you can start a new game and go through the game and player setup again.
 
